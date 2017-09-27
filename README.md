@@ -1,2 +1,2 @@
 # abstract-algebra
-Abstract Algebra work
+Work for Intro to Modern Algebra course, Fall 2017
