@@ -1,14 +1,29 @@
 \documentclass[a4paper,11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
 % define the title
-\author{H.~Partl}
-\title{Minimalism}
+\author{Sam Cook}
+\title{Intro to Modern Algebra \\Homework 3}
+\date{October 19th, 2017}
 \begin{document}
 % generates the title
 \maketitle
-% insert the table of contents
-\tableofcontents
-\section{Some Interesting Words}
-Well, and here begins my lovely article.
-\section{Good Bye World}
-\ldots{} and here it ends.
+\section{Section 3.3 \#8}
+\paragraph{Problem}
+Let $\mathbb{Q}(\sqrt{2})$ be as in Exercise 39 of Section 3.1 Prove that the function $f:\mathbb{Q}(\sqrt{2})  \rightarrow \mathbb{Q}(\sqrt{2})$
+given by $f(a + b\sqrt{2}) = a - b\sqrt{2}$ is an isomorphism.
+\paragraph{Solution}
+
+In order for $f$ to be an isomorphism, it must be a bijective homomorphism.
+
+First, to be bijective, it must be both injective and surjective.
+Take $f(a), f(b) \epsilon \mathbb{Q}\sqrt{2}$ such that $f(a) = f(b)$. Then, for some $k,l,m,n \epsilon \mathbb{Q}, f(k+l\sqrt{2}) = f(m + n\sqrt{2})$. This implies that $k-l\sqrt{2} = m - n\sqrt{2}$, by the definition of $f$.
+
+Now, consider $c - d\sqrt{2}  \epsilon \mathbb{Q}(\sqrt{2})$. $c - d\sqrt{2}$ is mapped to from $c + d\sqrt{2}$, since $(c + d\sqrt{2}) = c - d\sqrt{2}$. Therefore, $f$ is surjective, and as a result of that, bijective.
+
+Now, we must prove that $f$ is a homomorphism.
+Consider  $f((k+l\sqrt{2}) * (m + n\sqrt{2}))$. This simplifies to $f(km + kn\sqrt{2} + ml\sqrt{2} + nl)$, which again simplifies to $f((km + nl) + (kn + ml)\sqrt{2})$. By applying the function $f$, we get $f((km + nl) + (kn + ml)\sqrt{2}) = (km + nl) - (kn + ml)\sqrt{2}$. Now consider $f(k+l\sqrt{2}) * f(m+n\sqrt{2})$. By appliying $f$, we get $(k -l\sqrt{2}) * (m - n\sqrt{2})$. We  can use distributive laws to get $km - kn\sqrt{2} - ml\sqrt{2} +2nl = (km + 2nl) - (kn + ml)\sqrt{2} = f((k+l\sqrt{2}) * (m + l\sqrt{2}))$. Therefore, $f$ preserves multiplication
+
+Now consider $f((k+l\sqrt{2}) + (m + n\sqrt{2}))$ This simplifies to $f((k+m) + (n+l)\sqrt{2})$.Applying $f$, $f((k+m) + (n+l)\sqrt{2}) = (k+m) - (n+l)\sqrt{2}$.  Next consider $f(k + l\sqrt{2}) + f(m + n\sqrt{2})$. Applying $f$, $f(k + l\sqrt{2}) + f(m + n\sqrt{2}) = (k-l\sqrt{2}) + (m-\sqrt{2}) = (k+m) - (n+l)\sqrt{2}$, by associativity. But $(k+m) - (n+l)\sqrt{2} = f((k+l\sqrt{2}) + (m+n\sqrt{2})$ and therefore $f$ preserves addition.
+ Since $f$ preserves addition and multiplication, it is a homomorphism, and since it is a bijective homomorphism, it is an isomorphism.
 \end{document}
