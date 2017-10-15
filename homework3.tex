@@ -60,13 +60,21 @@ Since $K$ is a nonempty subset closed under subtraction and multiplication, it i
 
 \section{Section 3.3 \#38}
 \paragraph{Problem}
-Let $F$ be a field and $f: \rightarrow R$ a homomorphism of rings.
+Let $F$ be a field and $f:F \rightarrow R$ a homomorphism of rings.
 \subparagraph{(a)}
 If there is a nonzero element $c$ of $F$ such that $f(c) = 0_R$, prove that $f$ is the zero homomorphism (that is, $f(x) = 0_R$ for every $x \epsilon F$). [Hint: $c^{-1}$ exists (Why?). If $x \epsilon F$, consider $F(xcc^{-1})$.]
+
 \subparagraph{(b)}
 Prove that $f$ is either injective or the zero homomorphism. [Hint: If $f$ is not the zero homomorphism and $f(a)= f(b)$, then $f(a-b) = 0_R$.]
 
 \paragraph{Solution}
+\subparagraph{(a)}
+Take $c \epsilon F, c \neq 0, f(c) = 0_R$ and take any $x \epsilon F$. Note that since $F$ is a field, $c^{-1}$ exists. Now consider the product$f(x)*f(c)*f(c^{-1}) = 0_R$. We know that the solution is $0_R$, since $f(c) = 0_R$, and $0_R$ multiplied by anything is $0_R$. Since $f$ is a ring homomorphism, $f(x)*f(c)*f(c^{-1}) = f(xcc^{-1}) = f(x*1) = f(x) = 0_R$. This implies that for any element $x \epsilon F, f(x) = 0_R$, and therefore $f$ is the zero homomorphism.
+
+\subparagraph{(b)}
+If there is a nonzero element $c$ of $F$ such that $f(c) = 0_R$, then $f$ is the zero homomorphism, from part (a) above. Assume that there there is no such element $c$ of $F$. Now assume that for $a,b \epsilon F$, $f(a) = f(b)$. Then $f(a) - f(b) = f(a-b) = 0_R$, since $f$ is a ring homomorphism. Since $F$ is a field and $f$ is a ring homomorphism, $f(a-b) = 0_R$ implies that $a-b = 0_F$, which can be simplified to $a-b = 0_F \Rightarrow a = b + 0_F \Rightarrow a = b$. Therefore, $f$ is injective.
+
+Now, if there is a nonzero element $c$ of $F$ such that $f(c) = 0_R$, then $f$ is the zero homomorphism, and if there is not, $f$ is injective.
 
 \section{Extra Problem}
 \paragraph{Problem}
