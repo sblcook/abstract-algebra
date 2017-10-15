@@ -17,9 +17,9 @@ given by $f(a + b\sqrt{2}) = a - b\sqrt{2}$ is an isomorphism.
 In order for $f$ to be an isomorphism, it must be a bijective homomorphism.
 
 First, to be bijective, it must be both injective and surjective.
-Take $f(a), f(b) \epsilon \mathbb{Q}\sqrt{2}$ such that $f(a) = f(b)$. Then, for some $k,l,m,n \epsilon \mathbb{Q}, f(k+l\sqrt{2}) = f(m + n\sqrt{2})$. This implies that $k-l\sqrt{2} = m - n\sqrt{2}$, by the definition of $f$.
+Take $f(a), f(b) \epsilon \mathbb{Q}\sqrt{2}$ such that $f(a) = f(b)$. Then, for some $k,l,m,n \epsilon \mathbb{Q}, f(k+l\sqrt{2}) = f(m + n\sqrt{2})$. This implies that $k-l\sqrt{2} = m - n\sqrt{2}$, by the definition of $f$. We can group the rational and irrational parts together to get $k-l\sqrt{2} = m - n\sqrt{2} \Rightarrow (k-m) = (l-n)\sqrt{2}$. But $(k-m)$ is rational, and $(l-n)\sqrt{2}$ is irrational. The only way this could be possible is if $(k-m)=0$ and $(l-n)=0$, since $(0-0) = (0-0)\sqrt{2}$. This implies that $k=m$ and $l=n$. Therefore, $k+l\sqrt{2} = m + n\sqrt{2}$ and $f$ is an injective function.
 
-Now, consider $c - d\sqrt{2}  \epsilon \mathbb{Q}(\sqrt{2})$. $c - d\sqrt{2}$ is mapped to from $c + d\sqrt{2}$, since $(c + d\sqrt{2}) = c - d\sqrt{2}$. Therefore, $f$ is surjective, and as a result of that, bijective.
+Now, consider $c - d\sqrt{2}  \epsilon \mathbb{Q}(\sqrt{2})$. $c - d\sqrt{2}$ is mapped to from $c + d\sqrt{2}$, since $(c + d\sqrt{2}) = c - d\sqrt{2}$. Therefore, $f$ is surjective, and as a result of that, bijective.\\
 
 Now, we must prove that $f$ is a homomorphism.
 Consider  $f((k+l\sqrt{2}) * (m + n\sqrt{2}))$. This simplifies to $f(km + kn\sqrt{2} + ml\sqrt{2} + nl)$, which again simplifies to $f((km + nl) + (kn + ml)\sqrt{2})$. By applying the function $f$, we get $f((km + nl) + (kn + ml)\sqrt{2}) = (km + nl) - (kn + ml)\sqrt{2}$. Now consider $f(k+l\sqrt{2}) * f(m+n\sqrt{2})$. By appliying $f$, we get $(k -l\sqrt{2}) * (m - n\sqrt{2})$. We  can use distributive laws to get $km - kn\sqrt{2} - ml\sqrt{2} +2nl = (km + 2nl) - (kn + ml)\sqrt{2} = f((k+l\sqrt{2}) * (m + l\sqrt{2}))$. Therefore, $f$ preserves multiplication
