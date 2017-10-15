@@ -84,6 +84,32 @@ $\bullet R \simeq R$ for all rings $R$\\
 $\bullet$ If $R \simeq S$ for rings $R$ and $S$, then $S \simeq R$\\
 $\bullet$ If $R \simeq S$ and $S \simeq T$ for rings $R$, $S$, and $T$, then $R \simeq T$ (See problem \#27)
 
-\paragraph{Solution}
+\paragraph{Solution}  
+$\bullet$ Let $f: R \rightarrow R$ be defined for $a \epsilon R$ as  $f(a) = a$, the identity function. 
+
+The identity function is bijective, but this is easy to prove. To prove injectivity, assume that $f(x) = f(y)$ for some $x,y \epsilon R$. By the definition of $f$, $f(x) = f(y) \Rightarrow x = y$, and therefore $f$ is injective. To prove surjectivity, take $f(z) \epsilon R$. $f(z)$ is mapped to by $z \epsilon R$, and thus $f$ is surjective. Since $f$ is surjective and injective, it is bijective.
+
+Now to prove that $f$ is a homomorphism, we must prove that it preserves addition and multiplication. 
+
+Consider $f(x + y)$ such that $x,y \epsilon R$. Then $f(x+y) = x + y$. Now consider $f(x)$ and $f(y)$. Well $f(x) = x$ and $f(y) = y$, so $f(x+y) = x + y = f(x) + f(y)$. Therefore $f$ preserves addition.
+
+Next, consider $f(xy) = xy$, $f(x) = x$, and $f(y) = y$. Then $f(xy) = xy = f(x)f(y)$, and therefore $f$ preserves multiplication.
+
+Thus, $f: R \rightarrow R$ is an isomorphism for all rings $R$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
