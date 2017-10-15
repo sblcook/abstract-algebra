@@ -26,4 +26,39 @@ Consider  $f((k+l\sqrt{2}) * (m + n\sqrt{2}))$. This simplifies to $f(km + kn\sq
 
 Now consider $f((k+l\sqrt{2}) + (m + n\sqrt{2}))$ This simplifies to $f((k+m) + (n+l)\sqrt{2})$.Applying $f$, $f((k+m) + (n+l)\sqrt{2}) = (k+m) - (n+l)\sqrt{2}$.  Next consider $f(k + l\sqrt{2}) + f(m + n\sqrt{2})$. Applying $f$, $f(k + l\sqrt{2}) + f(m + n\sqrt{2}) = (k-l\sqrt{2}) + (m-\sqrt{2}) = (k+m) - (n+l)\sqrt{2}$, by associativity. But $(k+m) - (n+l)\sqrt{2} = f((k+l\sqrt{2}) + (m+n\sqrt{2})$ and therefore $f$ preserves addition.
  Since $f$ preserves addition and multiplication, it is a homomorphism, and since it is a bijective homomorphism, it is an isomorphism.
+
+\section{Section 3.3\# 12e}
+\paragraph{Problem} Is the following function a homeomorphism or not?
+\begin{equation}
+f: \mathbb{Z}_{12} \rightarrow \mathbb{Z}_4 
+\end{equation}
+defined by $f([x]_{12}]) = [x]_4$, where $[u]_4$ denotes the class of the integer $u$ in $\mathbb{Z}_n$
+\paragraph{Solution}
+
+\section{Section 3.3\#30}
+\paragraph{Problem}
+Let $f:R\rightarrow S$ be a homomorphism of rings and let $K = {r\epsilon R \: f(r) = 0_r}$.
+Prove that K is a subring of R.
+\paragraph{Solution}
+
+\section{Section 3.3 \#38}
+\paragraph{Problem}
+Let $F$ be a field and $f: \rightarrow R$ a homomorphism of rings.
+\subparagraph{(a)}
+If there is a nonzero element $c$ of $F$ such that $f(c) = 0_R$, prove that $f$ is the zero homomorphism (that is, $f(x) = 0_R$ for every $x \epsilon F$). [Hint: $c^{-1}$ exists (Why?). If $x \epsilon F$, consider $F(xcc^{-1})$.]
+\subparagraph{(b)}
+Prove that $f$ is either injective of the zero homomorphism. [Hint: If $f$ is not the zero homomorphism and $f(a)= f(b)$, then $f(a-b) = 0_R$.]
+
+\paragraph{Solution}
+
+\section{Extra Problem}
+\paragraph{Problem}
+Define an equivalence relation on the set of all rings by defining a ring $R$ to be equivalent to a ring $S$ if there is a ring isomorphism $f: R \rightarrow S$, i.e. $R$ is isomorphic to $S$, $R \simeq S$. 
+Show that this is an equivalence relation by showing\\
+$\bullet R \simeq R$ for all rings $R$\\
+$\bullet$ If $R \simeq S$ for rings $R$ and $S$, then $S \simeq R$\\
+$\bullet$ If $R \simeq S$ and $S \simeq T$ for rings $R$, $S$, and $T$, then $R \simeq T$ (See problem \#27)
+
+\paragraph{Solution}
+
 \end{document}
