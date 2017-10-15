@@ -1,6 +1,7 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage[margin = 1.0in]{geometry}
 % define the title
 \author{Sam Cook}
 \title{Intro to Modern Algebra \\Homework 3}
@@ -32,8 +33,16 @@ Now consider $f((k+l\sqrt{2}) + (m + n\sqrt{2}))$ This simplifies to $f((k+m) + 
 \begin{equation}
 f: \mathbb{Z}_{12} \rightarrow \mathbb{Z}_4 
 \end{equation}
-defined by $f([x]_{12}]) = [x]_4$, where $[u]_4$ denotes the class of the integer $u$ in $\mathbb{Z}_n$
+defined by $f([x]_{12}) = [x]_4$, where $[u]_4$ denotes the class of the integer $u$ in $\mathbb{Z}_n$
 \paragraph{Solution}
+First, we need to prove that this function is well defined. To do this, consider $[a]_{12}$ and $[a+12]_{12}$ such that $a, a+12\ epsilon \mathbb{Z}_{12}$. It is clear that $[a]_{12} = [a+12]_{12}$, since these are equivalence classes in $\mathbb{Z}_{12}$. Now consider $f([a]_{12})$ and $f([a+12]_{12})$. Then applying $f$, $f([a]_{12}) = [a]_4$ and $f([a+12]_{12}) = [a+12]_4$. But $[a+12]_4 = [a]_4 + [12]_4 = [a]_4 + [0]_4 = [a]_4$, since it is an equivalence class. Then $f([a]_{12}) = f([a+12]_{12}) $, and $f$ is well defined.
+
+Now, for $f$ to be a homomorphism, it must preserve addition and multiplication. Consider $f([x]_{12} + [y]_{12})$, $x,y \epsilon \mathbb{Z}_{12}$. Then $f([x]_{12} + [y]_{12}) = f([x+y]_{12}) = [x+y]_{4}$, by the definitions of equivalence classes and $f$. Now consider $f([x]_{12}) + f([y]_{12}) = [x]_4 + [y]_4 = [x+y]_4 = f([x]_{12} + [y]_{12})$, by the same properties of equivalence classes. Since $f([x]_{12} + [y]_{12}) = f([x]_{12}) + f([y]_{12})$, $f$ preserves addition.
+
+ To check if $f$ preserves multiplication, consider $f([x]_{12}*[y]_{12})$. We can use rules of equivalence classes and apply the function $f$ to get $f([x]_{12}*[y]_{12}) = f([xy]_{12}) = [xy]_4$. Now consider $f([x]_{12}) * f([y]_{12})$. By applying $f$, we get $f([x]_{12}) * f([y]_{12}) = [x]_4 * [y]_4 = [xy]_4 = f([x]_{12}*[y]_{12})$, and therefore $f$ preserves multiplication.
+
+Since $f$ is well-defined and preserves multiplication and addition, it is homomorphism.
+
 
 \section{Section 3.3\#30}
 \paragraph{Problem}
