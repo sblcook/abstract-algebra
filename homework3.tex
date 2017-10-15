@@ -46,9 +46,17 @@ Since $f$ is well-defined and preserves multiplication and addition, it is homom
 
 \section{Section 3.3\#30}
 \paragraph{Problem}
-Let $f:R\rightarrow S$ be a homomorphism of rings and let $K = {r\epsilon R \: f(r) = 0_r}$.
+Let $f:R\rightarrow S$ be a homomorphism of rings and let $K = \{r\epsilon R | f(r) = 0_S\}$.
 Prove that K is a subring of R.
 \paragraph{Solution}
+
+Since $f$ is a homomorphism of rings, $0_R \epsilon R$, $0_S \epsilon S$, and $f(0_R) = 0_S$. Therefore, $0_R \epsilon K$, and $K \neq \emptyset$.
+
+Now take $a, b \epsilon K$. By the definition of $K$, $f(a) = 0_S$ and $f(b) = 0_S$. Subtracting one from the other, $f(a) - f(b) = 0_S - 0_S = 0_S$. Since $f$ is a ring homomorphism, it preserves subtraction, and $f(a) - f(b) = f(a - b) = 0_S$. This implies that $a-b \epsilon K$, and therefore $K$ is closed under subtraction.
+
+To proved that $K$ is closed under multiplication, consider the same $a,b$ from above. Then $f(a) * f(b) = 0_S * 0_S = 0_S$. Again, since $f$ is a ring homomorphism, it preserves multiplication and $f(a) * f(b) = f(a*b) = 0_S$. Therefore, $ab \epsilon K$ and $K$ is closed under multiplication. 
+
+Since $K$ is a nonempty subset closed under subtraction and multiplication, it is a subring of $R$.
 
 \section{Section 3.3 \#38}
 \paragraph{Problem}
