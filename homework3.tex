@@ -84,7 +84,7 @@ $\bullet R \simeq R$ for all rings $R$\\
 $\bullet$ If $R \simeq S$ for rings $R$ and $S$, then $S \simeq R$\\
 $\bullet$ If $R \simeq S$ and $S \simeq T$ for rings $R$, $S$, and $T$, then $R \simeq T$ (See problem \#27)
 
-\paragraph{Solution}  
+\paragraph{Solution\\}  
 $\bullet$ Let $f: R \rightarrow R$ be defined for $a \epsilon R$ as  $f(a) = a$, the identity function. 
 
 The identity function is bijective, but this is easy to prove. To prove injectivity, assume that $f(x) = f(y)$ for some $x,y \epsilon R$. By the definition of $f$, $f(x) = f(y) \Rightarrow x = y$, and therefore $f$ is injective. To prove surjectivity, take $f(z) \epsilon R$. $f(z)$ is mapped to by $z \epsilon R$, and thus $f$ is surjective. Since $f$ is surjective and injective, it is bijective.
@@ -95,7 +95,17 @@ Consider $f(x + y)$ such that $x,y \epsilon R$. Then $f(x+y) = x + y$. Now consi
 
 Next, consider $f(xy) = xy$, $f(x) = x$, and $f(y) = y$. Then $f(xy) = xy = f(x)f(y)$, and therefore $f$ preserves multiplication.
 
-Thus, $f: R \rightarrow R$ is an isomorphism for all rings $R$.
+Thus, $f: R \rightarrow R$ is an isomorphism for all rings $R$.\\
+
+$\bullet$ Assume there is some function $f: R \rightarrow S$ such that $f(x) = x$ and $f$ is an isomorphism. Consider $g: S \rightarrow R$ such that $g$ is the inverse of $f$, $f^{-1}$. We know that the inverse of a bijective function is bijective, so this means that $g$ is bijective. 
+
+Now, we need to prove that $g$ is bijective. By the definition of inverse functions, $g$ is $f^{-1}$, $g(f(x)) = x$, for some $x \epsilon R$.
+
+Consider $g(f(x) + f(y))$ for some $x,y \epsilon R$ and $f(x), f(y) \epsilon S$.Since $f$ is isomorphic, $f$ preserves addition and $g(f(x) + f(y)) = g(f(x+y))$. Applying $g$, $g(f(x+y)) = x + y$. Now consider $g(f(x)) + g(f(y))$ We can apply $g$ to get $g(f(x)) + g(f(y)) = x + y = g(f(x) + f(y))$ Therefore $g$ preserves addition.
+
+Next, consider $g(f(x)*f(y))$. Again, since $f$ is isomorphic, it preserves multiplication and $g(f(x)*f(y)) = g(f(xy)) = xy$, by applying $g$. Now consider $g(f(x))*g(f(y))$. Applying $g$, $g(f(x))*g(f(y)) = xy = g(f(x)f(y))$. Thus, $g$ preserves multiplication. 
+
+Since $g$ is a bijection that preserves addition and multiplication, $g: S \rightarrow R$ is an isomorphism.\\
 
 
 
