@@ -18,12 +18,12 @@ given by $f(a + b\sqrt{2}) = a - b\sqrt{2}$ is an isomorphism.
 In order for $f$ to be an isomorphism, it must be a bijective homomorphism.
 
 First, to be bijective, it must be both injective and surjective.
-Take $f(a), f(b) \epsilon \mathbb{Q}\sqrt{2}$ such that $f(a) = f(b)$. Then, for some $k,l,m,n \epsilon \mathbb{Q}, f(k+l\sqrt{2}) = f(m + n\sqrt{2})$. This implies that $k-l\sqrt{2} = m - n\sqrt{2}$, by the definition of $f$. We can group the rational and irrational parts together to get $k-l\sqrt{2} = m - n\sqrt{2} \Rightarrow (k-m) = (l-n)\sqrt{2}$. But $(k-m)$ is rational, and $(l-n)\sqrt{2}$ is irrational. The only way this could be possible is if $(k-m)=0$ and $(l-n)=0$, since $(0-0) = (0-0)\sqrt{2}$. This implies that $k=m$ and $l=n$. Therefore, $k+l\sqrt{2} = m + n\sqrt{2}$ and $f$ is an injective function.
+Take $f(a), f(b) \epsilon \mathbb{Q}(\sqrt{2})$ such that $f(a) = f(b)$. Then, for some $k,l,m,n \epsilon \mathbb{Q}, f(k+l\sqrt{2}) = f(m + n\sqrt{2})$. This implies that $k-l\sqrt{2} = m - n\sqrt{2}$, by the definition of $f$. We can group the rational and irrational parts together to get $k-l\sqrt{2} = m - n\sqrt{2} \Rightarrow (k-m) = (l-n)\sqrt{2}$. But $(k-m)$ is rational, and $(l-n)\sqrt{2}$ is irrational. The only way this could be possible is if $(k-m)=0$ and $(l-n)=0$, since $(0-0) = (0-0)\sqrt{2}$. This implies that $k=m$ and $l=n$. Therefore, $k+l\sqrt{2} = m + n\sqrt{2}$, or $a=b$ and $f$ is an injective function.
 
-Now, consider $c - d\sqrt{2}  \epsilon \mathbb{Q}(\sqrt{2})$. $c - d\sqrt{2}$ is mapped to from $c + d\sqrt{2}$, since $(c + d\sqrt{2}) = c - d\sqrt{2}$. Therefore, $f$ is surjective, and as a result of that, bijective.\\
+Now, consider $c - d\sqrt{2}  \epsilon \mathbb{Q}(\sqrt{2})$ for any $c,d \epsilon \mathbb{Q}$. $c - d\sqrt{2}$ is mapped to from $c + d\sqrt{2}$, since $f(c + d\sqrt{2}) = c - d\sqrt{2}$. Therefore, $f$ is surjective, and as a result of that, bijective.\\
 
 Now, we must prove that $f$ is a homomorphism.
-Consider  $f((k+l\sqrt{2}) * (m + n\sqrt{2}))$. This simplifies to $f(km + kn\sqrt{2} + ml\sqrt{2} + nl)$, which again simplifies to $f((km + nl) + (kn + ml)\sqrt{2})$. By applying the function $f$, we get $f((km + nl) + (kn + ml)\sqrt{2}) = (km + nl) - (kn + ml)\sqrt{2}$. Now consider $f(k+l\sqrt{2}) * f(m+n\sqrt{2})$. By appliying $f$, we get $(k -l\sqrt{2}) * (m - n\sqrt{2})$. We  can use distributive laws to get $km - kn\sqrt{2} - ml\sqrt{2} +2nl = (km + 2nl) - (kn + ml)\sqrt{2} = f((k+l\sqrt{2}) * (m + l\sqrt{2}))$. Therefore, $f$ preserves multiplication
+Consider  $f((k+l\sqrt{2}) * (m + n\sqrt{2}))$ with $(k+l\sqrt{2}), (m + n\sqrt{2}) \epsilon \mathbb{Q}(\sqrt{2})$. We can multiply the terms to get $f(km + kn\sqrt{2} + ml\sqrt{2} + nl)$, which simplifies to $f((km + nl) + (kn + ml)\sqrt{2})$. By applying the function $f$ and distributive laws,  $f((km + nl) + (kn + ml)\sqrt{2}) = (km + nl) - (kn + ml)\sqrt{2}$. Now consider $f(k+l\sqrt{2}) * f(m+n\sqrt{2})$. By appliying $f$, we get $(k -l\sqrt{2}) * (m - n\sqrt{2})$. We  can use distributive laws to get $km - kn\sqrt{2} - ml\sqrt{2} +2nl = (km + 2nl) - (kn + ml)\sqrt{2} = f((k+l\sqrt{2}) * (m + l\sqrt{2}))$. Therefore, $f$ preserves multiplication
 
 Now consider $f((k+l\sqrt{2}) + (m + n\sqrt{2}))$ This simplifies to $f((k+m) + (n+l)\sqrt{2})$.Applying $f$, $f((k+m) + (n+l)\sqrt{2}) = (k+m) - (n+l)\sqrt{2}$.  Next consider $f(k + l\sqrt{2}) + f(m + n\sqrt{2})$. Applying $f$, $f(k + l\sqrt{2}) + f(m + n\sqrt{2}) = (k-l\sqrt{2}) + (m-\sqrt{2}) = (k+m) - (n+l)\sqrt{2}$, by associativity. But $(k+m) - (n+l)\sqrt{2} = f((k+l\sqrt{2}) + (m+n\sqrt{2})$ and therefore $f$ preserves addition.
  Since $f$ preserves addition and multiplication, it is a homomorphism, and since it is a bijective homomorphism, it is an isomorphism.
@@ -97,7 +97,7 @@ Next, consider $f(xy) = xy$, $f(x) = x$, and $f(y) = y$. Then $f(xy) = xy = f(x)
 
 Thus, $f: R \rightarrow R$ is an isomorphism for all rings $R$.\\
 
-$\bullet$ Assume there is some function $f: R \rightarrow S$ such that $f(x) = x$ and $f$ is an isomorphism. Consider $g: S \rightarrow R$ such that $g$ is the inverse of $f$, $f^{-1}$. We know that the inverse of a bijective function is bijective, so this means that $g$ is bijective. 
+$\bullet$ Assume there is some function $f: R \rightarrow S$ such that $f$ is an isomorphism. Consider $g: S \rightarrow R$ such that $g$ is the inverse of $f$, $f^{-1}$. We know that the inverse of a bijective function is bijective, so this means that $g$ is bijective. 
 
 Now, we need to prove that $g$ is bijective. By the definition of inverse functions, $g$ is $f^{-1}$, $g(f(x)) = x$, for some $x \epsilon R$.
 
@@ -107,19 +107,12 @@ Next, consider $g(f(x)*f(y))$. Again, since $f$ is isomorphic, it preserves mult
 
 Since $g$ is a bijection that preserves addition and multiplication, $g: S \rightarrow R$ is an isomorphism.\\
 
+$\bullet$ Assume that $f: R \rightarrow S$ and $g: S \rightarrow T$ are isomorphisms. Then $f$ and $g$ are bijective, as is $g \circ f$, the composition of the funtions.
 
+Now, we must prove that $g\circ f$ is an homomorphism. Consider $g(f(x)+f(y))$, for some $x,y\epsilon R$ and $f(x), f(y) \epsilon S$. Since $f$ and $g$ are isomorphisms, $g(f(x)+f(y)) = g(f(x)) + g(f(y))$, so $g\circ f$ respects addition. 
 
+Now consider $g(f(x)*f(y))$. Again, since $f$ and $g$ are isomorphisms, they respect multiplication, $g(f(x)*f(y)) = g(f(x)) * g(f(y))$, and $g\circ f$ respects multiplication.
 
-
-
-
-
-
-
-
-
-
-
-
+Therefore, since $g \circ f$ preserves multiplication and addition, and is a bijection from $R \rightarrow T$, $R$ and $T$ are isomorphic.
 
 \end{document}
