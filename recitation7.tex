@@ -1,0 +1,45 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin = 1.0in]{geometry}
+\usepackage{polynom}
+% define the title
+\author{Sam Cook}
+\title{Intro to Modern Algebra \\Recitation 7}
+\date{October 17th, 2017}
+\begin{document}
+% generates the title
+\maketitle
+
+\paragraph{Step 3:\\}
+Let $f(x) = 3x^3 + x^2 + 2x$ and $g(x) = 2x^2+x+4$
+\subparagraph{b)}
+If $f$ and $g$ are elements of $\mathbb{Z}_5[x]$, use long division to find $q(x)$ and $r(x)$ so that $f(x) = g(x)q(x) + r(x)$.
+
+%\polylongdiv{3x^3 + x^2 + 2x + 2}{2x^2+x+4}
+
+%$$
+%\begin{array}{rc@{}c}
+%& 1 & 3 \\ \cline{2-3}
+%\multicolumn{1}{r|}{7} & 9 & 1 \\
+%& 7 & 0 \\ \cline{2-3}
+%& 2 & 1 \\ 
+%& 2 & 1 \\ \cline{2-3}
+%& & 0
+%\end{array}
+%$$
+
+$$
+\begin{array}{rc@{}c@{} c@{}c}
+&&& 4x & +1\\ \cline{2-5}
+\multicolumn{1}{r|}{2x^2 + x + 4} & 3x^3& +x^2&+2x& +2\\
+&-3x^3&-4x^2 &-x&\\ \cline{2-5}
+&0&+2x^2&+x& +2\\
+&&-2x^2&-x&-4\\ \cline{3-5}
+&& 0 & +0& +3\\
+\end{array}
+$$
+
+$f(x) = 4x+1$ and $g(x) = 3$
+
+\end{document}
