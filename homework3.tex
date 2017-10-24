@@ -20,7 +20,7 @@ In order for $f$ to be an isomorphism, it must be a bijective homomorphism.
 First, to be bijective, it must be both injective and surjective.
 Take $f(a), f(b) \epsilon \mathbb{Q}(\sqrt{2})$ such that $f(a) = f(b)$. Then, for some $k,l,m,n \epsilon \mathbb{Q}, f(k+l\sqrt{2}) = f(m + n\sqrt{2})$. This implies that $k-l\sqrt{2} = m - n\sqrt{2}$, by the definition of $f$. We can group the rational and irrational parts together to get $k-l\sqrt{2} = m - n\sqrt{2} \Rightarrow (k-m) = (l-n)\sqrt{2}$. But $(k-m)$ is rational, and $(l-n)\sqrt{2}$ is irrational. The only way this could be possible is if $(k-m)=0$ and $(l-n)=0$, since $(0-0) = (0-0)\sqrt{2}$. This implies that $k=m$ and $l=n$. Therefore, $k+l\sqrt{2} = m + n\sqrt{2}$, or $a=b$ and $f$ is an injective function.
 
-Now, consider $c - d\sqrt{2}  \epsilon \mathbb{Q}(\sqrt{2})$ for any $c,d \epsilon \mathbb{Q}$. $c - d\sqrt{2}$ is mapped to from $c + d\sqrt{2}$, since $f(c + d\sqrt{2}) = c - d\sqrt{2}$. Therefore, $f$ is surjective, and as a result of that, bijective.\\
+Now, consider $c + d\sqrt{2}  \epsilon \mathbb{Q}(\sqrt{2})$ for any $c,d \epsilon \mathbb{Q}$. $c + d\sqrt{2}$ is mapped to from $c - d\sqrt{2}$, which can also be written as $c + (-d)\sqrt{2}$, since $f(c - d\sqrt{2}) = c + d\sqrt{2}$. Therefore, $f$ is surjective, and as a result of that, bijective.\\
 
 Now, we must prove that $f$ is a homomorphism.
 Consider  $f((k+l\sqrt{2}) * (m + n\sqrt{2}))$ with $(k+l\sqrt{2}), (m + n\sqrt{2}) \epsilon \mathbb{Q}(\sqrt{2})$. We can multiply the terms to get $f(km + kn\sqrt{2} + ml\sqrt{2} + nl)$, which simplifies to $f((km + nl) + (kn + ml)\sqrt{2})$. By applying the function $f$ and distributive laws,  $f((km + nl) + (kn + ml)\sqrt{2}) = (km + nl) - (kn + ml)\sqrt{2}$. Now consider $f(k+l\sqrt{2}) * f(m+n\sqrt{2})$. By appliying $f$, we get $(k -l\sqrt{2}) * (m - n\sqrt{2})$. We  can use distributive laws to get $km - kn\sqrt{2} - ml\sqrt{2} +2nl = (km + 2nl) - (kn + ml)\sqrt{2} = f((k+l\sqrt{2}) * (m + l\sqrt{2}))$. Therefore, $f$ preserves multiplication
@@ -35,7 +35,7 @@ f: \mathbb{Z}_{12} \rightarrow \mathbb{Z}_4
 \end{equation}
 defined by $f([x]_{12}) = [x]_4$, where $[u]_4$ denotes the class of the integer $u$ in $\mathbb{Z}_n$
 \paragraph{Solution}
-First, we need to prove that this function is well defined. To do this, consider $[a]_{12}$ and $[a+12]_{12}$ such that $a, a+12\ epsilon \mathbb{Z}_{12}$. It is clear that $[a]_{12} = [a+12]_{12}$, since these are equivalence classes in $\mathbb{Z}_{12}$. Now consider $f([a]_{12})$ and $f([a+12]_{12})$. Then applying $f$, $f([a]_{12}) = [a]_4$ and $f([a+12]_{12}) = [a+12]_4$. But $[a+12]_4 = [a]_4 + [12]_4 = [a]_4 + [0]_4 = [a]_4$, since it is an equivalence class. Then $f([a]_{12}) = f([a+12]_{12}) $, and $f$ is well defined.
+First, we need to prove that this function is well defined. To do this, consider $[a]_{12}$ and $[a+k12]_{12}, k\epsilon\mathbb{Z}$ such that $a, a+12\ epsilon \mathbb{Z}_{12}$. It is clear that $[a]_{12} = [a+12]_{12}$, since these are equivalence classes in $\mathbb{Z}_{12}$. Now consider $f([a]_{12})$ and $f([a+12]_{12})$. Then applying $f$, $f([a]_{12}) = [a]_4$ and $f([a+12]_{12}) = [a+12]_4$. But $[a+12]_4 = [a]_4 + [12]_4 = [a]_4 + [0]_4 = [a]_4$, since it is an equivalence class. Then $f([a]_{12}) = f([a+12]_{12}) $, and $f$ is well defined.
 
 Now, for $f$ to be a homomorphism, it must preserve addition and multiplication. Consider $f([x]_{12} + [y]_{12})$, $x,y \epsilon \mathbb{Z}_{12}$. Then $f([x]_{12} + [y]_{12}) = f([x+y]_{12}) = [x+y]_{4}$, by the definitions of equivalence classes and $f$. Now consider $f([x]_{12}) + f([y]_{12}) = [x]_4 + [y]_4 = [x+y]_4 = f([x]_{12} + [y]_{12})$, by the same properties of equivalence classes. Since $f([x]_{12} + [y]_{12}) = f([x]_{12}) + f([y]_{12})$, $f$ preserves addition.
 
@@ -99,19 +99,19 @@ Thus, $f: R \rightarrow R$ is an isomorphism for all rings $R$.\\
 
 $\bullet$ Assume there is some function $f: R \rightarrow S$ such that $f$ is an isomorphism. Consider $g: S \rightarrow R$ such that $g$ is the inverse of $f$, $f^{-1}$. We know that the inverse of a bijective function is bijective, so this means that $g$ is bijective. 
 
-Now, we need to prove that $g$ is bijective. By the definition of inverse functions, $g$ is $f^{-1}$, $g(f(x)) = x$, for some $x \epsilon R$.
+Now, we need to prove that $g$ is a homomorphism. By the definition of inverse functions, $g$ is $f^{-1}$, $g(f(x)) = x$, for some $x \epsilon R$.
 
-Consider $g(f(x) + f(y))$ for some $x,y \epsilon R$ and $f(x), f(y) \epsilon S$.Since $f$ is isomorphic, $f$ preserves addition and $g(f(x) + f(y)) = g(f(x+y))$. Applying $g$, $g(f(x+y)) = x + y$. Now consider $g(f(x)) + g(f(y))$ We can apply $g$ to get $g(f(x)) + g(f(y)) = x + y = g(f(x) + f(y))$ Therefore $g$ preserves addition.
+Consider $g(c + d)$ for some $c,d \epsilon S$. We know that $c$ and $d$ are mapped to by $f$, since $f$ is onto, so let $f(a) = c$ and $f(b) = d$ for some $a,b \epsilon R$. Then $g(c + d) = g(f(a) + f(b)) = g(f(a+b))$, since $f$ is isomorphic. Applying $g$, $g(f(a+b)) = a + b = g(f(a)) + g(f(b)) = g(c) + g(d)$, by applying $g$ and substituting. Therefore $g$ preserves addition.
 
-Next, consider $g(f(x)*f(y))$. Again, since $f$ is isomorphic, it preserves multiplication and $g(f(x)*f(y)) = g(f(xy)) = xy$, by applying $g$. Now consider $g(f(x))*g(f(y))$. Applying $g$, $g(f(x))*g(f(y)) = xy = g(f(x)f(y))$. Thus, $g$ preserves multiplication. 
+Next, consider $g(c * d)$ for some $c,d \epsilon S$. Similarly, we know that $c$ and $d$ are mapped to by $f$, since $f$ is onto, so let $f(a) = c$ and $f(b) = d$ for some $a,b \epsilon R$. Then $g(c * d) = g(f(a) * f(b))$. Again, since $f$ is isomorphic, it preserves multiplication and $g(f(a)*f(b)) = g(f(ab)) = ab = g(f(a))*g(f(b)) = g(c) * g(d)$, by applying $g$ and substituting. Thus, $g$ preserves multiplication. 
 
 Since $g$ is a bijection that preserves addition and multiplication, $g: S \rightarrow R$ is an isomorphism.\\
 
 $\bullet$ Assume that $f: R \rightarrow S$ and $g: S \rightarrow T$ are isomorphisms. Then $f$ and $g$ are bijective, as is $g \circ f$, the composition of the funtions.
 
-Now, we must prove that $g\circ f$ is an homomorphism. Consider $g(f(x)+f(y))$, for some $x,y\epsilon R$ and $f(x), f(y) \epsilon S$. Since $f$ and $g$ are isomorphisms, $g(f(x)+f(y)) = g(f(x)) + g(f(y))$, so $g\circ f$ respects addition. 
+Now, we must prove that $g\circ f$ is an homomorphism. Consider $g(f(x+y))$, for some $x,y\epsilon R$ and $f(x+y)\epsilon S$. Since $f$ and $g$ are isomorphisms, $g(f(x+y)) = g(f(x)+f(y)) = g(f(x)) + g(f(y))$, so $g\circ f$ respects addition. 
 
-Now consider $g(f(x)*f(y))$. Again, since $f$ and $g$ are isomorphisms, they respect multiplication, $g(f(x)*f(y)) = g(f(x)) * g(f(y))$, and $g\circ f$ respects multiplication.
+Now consider $g(f(x*y))$. Again, since $f$ and $g$ are isomorphisms, they respect multiplication, $g(f(x*y)) = g(f(x)*f(y)) = g(f(x)) * g(f(y))$, and $g\circ f$ respects multiplication.
 
 Therefore, since $g \circ f$ preserves multiplication and addition, and is a bijection from $R \rightarrow T$, $R$ and $T$ are isomorphic.
 
