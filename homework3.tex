@@ -111,6 +111,10 @@ $\bullet$ Assume that $f: R \rightarrow S$ and $g: S \rightarrow T$ are isomorph
 
 Take some $a \epsilon T$. Since $g$ is bijective, $a$ is mapped to by an element of $S$, so let $g(b) = a, b \epsilon S$. But since $f$ is bijective, there is an element $c \epsilon R$ such that $f(c) = b$. Then we can rewrite $a$ as $g(f(c))$. Thus, for any element in $T$, there is some element in $R$ that maps to it, and the $g \circ f$ is surjective.
 
+Now, consider $g(f(x)) = g(f(y))$ for some $x,y \epsilon R$. Well, since $g$ is bijective, $g(f(x)) = g(f(y))$ implies that $f(x) = f(y)$, and since $f$ is injective, $f(x) = f(y)$ implies that $x = y$. Therefore, the composition $g \circ f$ is injective.
+
+Since $g \circ f$ is injective and surjective, it is bijective.
+
 Now, we must prove that $g\circ f$ is an homomorphism. Consider $g(f(x+y))$, for some $x,y\epsilon R$ and $f(x+y)\epsilon S$. Since $f$ and $g$ are isomorphisms, $g(f(x+y)) = g(f(x)+f(y)) = g(f(x)) + g(f(y))$, so $g\circ f$ respects addition. 
 
 Now, consider $g(f(x*y))$. Again, since $f$ and $g$ are isomorphisms, they respect multiplication, $g(f(x*y)) = g(f(x)*f(y)) = g(f(x)) * g(f(y))$, and $g\circ f$ respects multiplication.
