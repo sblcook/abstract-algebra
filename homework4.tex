@@ -27,7 +27,7 @@
 
 \pagestyle{fancy}
 \lhead{\hmwkAuthorName}
-\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle}
+\chead{\hmwkClass}
 \rhead{\firstxmark}
 \lfoot{\lastxmark}
 \cfoot{\thepage}
@@ -172,6 +172,24 @@
 	
 	This is neither a homomorphism of rings nor an isomorphism. We will prove this by showing $D$ does not preserve multiplication. Consider $x^2, x^3 \epsilon \mathbb{R}[x]$. When we multiply them, $x^2 *x^3 = x^5$. Now, we will apply $D$ and multiply them. $D(x^2) * D(x^3) = 2x * 3x^2 = 6x^3 \neq x^5$. Therefore, $D$ does not preserve multiplication and cannot be a homomorphic or isomorphic.
 
+\end{homeworkProblem}
+
+\begin{homeworkProblem}[13]
+	Prove Theorem 4.10.
+	
+	\textbf{Theorem 4.10} \\
+	Let $\mathbb{F}$ be a field and $a(x), b(x), c(x) \epsilon \mathbb{F}[x]$. If $a(x)|b(x)c(x)$ and $a(x)$ and $b(x)$ are relatively prime, then $a(x)|c(x)$.\\
+	
+	\textbf{Solution}\\
+	Assume $\mathbb{F}$ be a field and $a(x), b(x), c(x) \epsilon \mathbb{F}[x]$, $a(x)|b(x)c(x)$, and $a(x)$ and $b(x)$ are relatively prime. Then gcd($a(x), b(x)$)=1, by the definition of relatively prime. But then, by Theorem 4.8, this means that for polynomials $u(x), v(x) \epsilon{F}[x]$, 
+	\[1 = a(x)v(x) + b(x)u(x).\]
+	We can multiply this equation by $c(x)$ to get that
+	\[ c(x)a(x)v(x) + c(x)b(x)u(x) = c(x)\]
+Since $a(x)|b(x)c(x)$, there exists some $z(x) \epsilon \mathbb(F)[x]$ such that $a(x)z(x) = b(x)c(x)$. We can substitute this into the above equation to get 
+	\[c(x)a(x)v(x) + a(x)z(x)u(x) = c(x)\]
+and we can then factor out $a(x)$ to get 
+	\[a(x)[c(x)v(x) + z(x)u(x)] = c(x)\]
+Since $c(x), v(x), z(x), u(x) \epsilon \mathbb{F}[x]$, $a(x)|c(x)$.
 \end{homeworkProblem}
 
 \pagebreak
