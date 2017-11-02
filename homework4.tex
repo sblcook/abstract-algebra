@@ -234,6 +234,7 @@ $\Leftarrow$ This proof is simply the above proof in reverse. Assume that $a_0 +
 \end{homeworkProblem}
 
 \begin{homeworkProblem}[14]
+
 \begin{enumerate}[label=\alph*]
 \item Suppose $r,s \epsilon \mathbb{F}$ are roots of $ax^2+bx+c \epsilon \mathbb{F}[x]$ (with $a\neq0_F$). Use the Factor Theorem to show that $r+s = -a^{-1}b$ and $rs = a^{-1}c$.
 \end{enumerate}
@@ -247,9 +248,25 @@ Assume $r,s \epsilon \mathbb{F}$ are roots of $ax^2+bx+c \epsilon \mathbb{F}[x]$
  \[x^2+a^{-1}bx+a^{-1}c = x^2-(r-s)x+rs\]
  Therefore, since polynomials are equivalent when all of their coefficients are equivealent, we have that $a^{-1}b = r-s$, or $-a^{-1}b = r+s$, and $a^{-1}c = rs$.
 \end{homeworkProblem}
+
 \begin{homeworkProblem}[18]
+
+Let $\varphi:\mathbb{C}\rightarrow\mathbb{C}$ be an isomorphism of rings such that $\varphi(a) = a$ for each $a \epsilon \mathbb{Q}$ Suppose $r \epsilon \mathbb{C}$ is a root of $f(x) \epsilon \mathbb{Q}[x]$. Prove that $\varphi(r)$ is also a root of $f(x)$.\\
+
+\textbf{Solution}\\
+Since $f$ is a polynomial, we can express it as 
+\[a_0+a_1x+\dots + a_nx^n\] 
+Now, $r$ is a root, so we can add $r$ to our polynomial by writing it as
+\[a_0+a_1r+\dots + a_nr^n = 0\] 
+We can apply $\varphi$ to the entire equation, 
+\[\varphi(a_0+a_1r+\dots + a_nr^n) = \varphi(0)\] 
+and since it is an isomorphism of rings, it preserves addition and 0, so 
+\[a_0+a_1\varphi(r)+\dots + a_n\varphi(r^n) = 0\] 
+This is the definition of roots of an equation, and therefore, $\varphi(r)$ is also a root of $f$.
 \end{homeworkProblem}
+
 \begin{homeworkProblem}[19]
+
 \end{homeworkProblem}
 
 \pagebreak
