@@ -152,19 +152,27 @@
    
     \end{enumerate}
 
-    \textbf{Solution}
+    \textbf{Solution}\\
+
+    	 \textbf{a)} This is a subring. We will show that it is a nonempty subset closed under subtraction and multiplication. First, zero is a polynomial with the constant term $0_R$, so it is a nonempty subset. Next, consider polynomials $a,b \epsilon \mathbb{R}[x]$. Then if we subtract them and $0_R$, we get $(a+0_R) - (b+0_R) = (a-b) + (0_R-0_R) = a-b$, and since $a,b\epsilon{R}$, it is closed under subtraction. Similarly for multiplication, we get $(a+0_R)*(b+0_R) = (ab)+(0_R*b)+(0_R*a) + 0_R = ab$, so it is similarly closed under multiplication. Therefore, it is a subring of $\mathbb{R}[x]$.\\
 
 
-	\begin{paragraph} a
-    	 This is a subring. We will show that it is a nonempty subset closed under subtraction and multiplication. First, zero is a polynomial with the constant term $0_R$, so it is a nonempty subset. Next, consider polynomials $a,b \epsilon \mathbb{R}[x]$. Then if we subtract them and $0_R$, we get $(a+0_R) - (b+0_R) = (a-b) + (0_R-0_R) = a-b$, and since $a,b\epsilon{R}$, it is closed under subtraction. Similarly for multiplication, we get $(a+0_R)*(b+0_R) = (ab)+(0_R*b)+(0_R*a) + 0_R = ab$, so it is similarly closed under multiplication. Therefore, it is a subring of $\mathbb{R}[x]$.
-	\end{paragraph}
 
-	\begin{paragraph} b
-		This is not a subring because it is not closed under multiplication. Consider the polynomials  $x^2$ and $x^2 +1$.When we multiply them, $x^2 * (x^2+1) = x^4 + x^2$, which is not a degree 2 polynomial, and therefore it is not closed under multiplication and cannot be a ring. Furthermore, $0_R$ is not of degree 2 and therefore is not in the subset. 
-	\end{paragraph}
+		\textbf{b)} This is not a subring because it is not closed under multiplication. Consider the polynomials  $x^2$ and $x^2 +1$.When we multiply them, $x^2 * (x^2+1) = x^4 + x^2$, which is not a degree 2 polynomial, and therefore it is not closed under multiplication and cannot be a ring. Furthermore, $0_R$ is not of degree 2 and therefore is not in the subset. 
+
 
 \end{homeworkProblem}
 
+\begin{homeworkProblem}[20]
+	Let $D:\mathbb{R}[x] \rightarrow \mathbb{R}[x]$ be the derivative map defined by 
+	\[D(a_0 + a_1x +a_2x^2 + ... + a_nx^n) = a_1 + 2a_x + 3a_3x^2 + ... + na_nx^{n-1}\]	
+	Is $D$ a homormorphism of rings? An isomorphism?\\
+	
+	\textbf{Solution}\\
+	
+	This is neither a homomorphism of rings nor an isomorphism. We will prove this by showing $D$ does not preserve multiplication. Consider $x^2, x^3 \epsilon \mathbb{R}[x]$. When we multiply them, $x^2 *x^3 = x^5$. Now, we will apply $D$ and multiply them. $D(x^2) * D(x^3) = 2x * 3x^2 = 6x^3 \neq x^5$. Therefore, $D$ does not preserve multiplication and cannot be a homomorphic or isomorphic.
+
+\end{homeworkProblem}
 
 \pagebreak
 
