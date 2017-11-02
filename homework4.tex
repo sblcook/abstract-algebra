@@ -230,10 +230,22 @@ Show that $x-1_F$ divides $a_nx^n + ... + a_2x^2 +a_1x+a_0$ in $\mathbb{F}[x]$ i
 
 $\Rightarrow$ Assume that $x-1_F$ divides $a_nx^n + ... + a_2x^2 +a_1x+a_0$ in $\mathbb{F}[x]$. Then $1_F$ is a root of $a_nx^n + ... + a_2x^2 +a_1x+a_0$, so this means that $a_n1^n + ... + a_21^2 +a_1+a_0 = 0$. Since 1 to any power is 1, this simplifies to $a_n + ... + a_2+a_1+a_0 = 0$\\
 
-$\Leftarrow$ This proof is simply the above proof in reverse. Assume that $a_0 + ... + a_n = 0_F$ in $\mathbb{F}[x]$. This can be rewritten as $a_01 + ... + a_n1 = 0_F$, or $a_01^0 + ... + a_n1^n = 0_F$. This is the form of a polynomial root evaluated at 1, so we can rewrite this as $a_nx^n + ... + a_2x^2 +a_1x+a_0$
+$\Leftarrow$ This proof is simply the above proof in reverse. Assume that $a_0 + ... + a_n = 0_F$ in $\mathbb{F}[x]$. This can be rewritten as $a_01 + ... + a_n1 = 0_F$, or $a_01^0 + ... + a_n1^n = 0_F$. This is the form of a polynomial root evaluated at 1, so $x-1$ is a factor.
 \end{homeworkProblem}
 
-\begin{homeworkProblem}[14]a
+\begin{homeworkProblem}[14]
+\begin{enumerate}[label=\alph*]
+\item Suppose $r,s \epsilon \mathbb{F}$ are roots of $ax^2+bx+c \epsilon \mathbb{F}[x]$ (with $a\neq0_F$). Use the Factor Theorem to show that $r+s = -a^{-1}b$ and $rs = a^{-1}c$.
+\end{enumerate}
+
+\textbf{Solution}\\
+Assume $r,s \epsilon \mathbb{F}$ are roots of $ax^2+bx+c \epsilon \mathbb{F}[x]$, $a\neq0_F$. Then, by the Factor Theorem, 
+\[ax^2+bx+c = (x-r)(x-s)q(x)\]
+ We know that $q(x) = 1_F$, because  $ax^2+bx+c$ is degree 2, and we already have two factors. We can express $ax^2+bx+c$ as it's equivilent monic associate by multiplying by $a^{-1}$. We then have 
+ \[a^{-1}ax^2+a^{-1}bx+a^{-1}c = (x-r)(x-s)\]
+ Now, we can multiply the two factors together to get 
+ \[x^2+a^{-1}bx+a^{-1}c = x^2-(r-s)x+rs\]
+ Therefore, since polynomials are equivalent when all of their coefficients are equivealent, we have that $a^{-1}b = r-s$, or $-a^{-1}b = r+s$, and $a^{-1}c = rs$.
 \end{homeworkProblem}
 \begin{homeworkProblem}[18]
 \end{homeworkProblem}
