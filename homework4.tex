@@ -266,6 +266,40 @@ This is the definition of roots of an equation, and therefore, $\varphi(r)$ is a
 \end{homeworkProblem}
 
 \begin{homeworkProblem}[19]
+We say that $a \epsilon \mathbb{F}$ is a multiple root of $f(x) \epsilon \mathbb{F}[x]$ if $(x-a)^k$ is a factor of $f(x)$ for some $k \geq 2$.
+\begin{enumerate}[label = \alph*]
+\item Prove that $a \epsilon \mathbb{R}$ is a multiple root of $f(x) \epsilon \mathbb{R}[x]$ if and only if $a$ is a root of both $f(x)$ and $f'(x)$.
+\item If $f(x) \epsilon \mathbb{R}$ and if $f(x)$ is relatively prime to $f'(x)$, prove that $f(x)$ has no multiple root in $\mathbb{R}$
+\end{enumerate}
+
+\textbf{Solution}\\
+\textbf{a)}\\
+$\Rightarrow$ Assume that $a \epsilon \mathbb{R}$ is a multiple root of $f(x) \epsilon \mathbb{R}[x]$. By definition of a multiple root, $(x-a)^k$ is a factor of $f, k\geq2$, and we can write $f(x) = (x-a)^k*g(x)$ for some $g(x) \epsilon \mathbb{F}[x]$. If we differentiate this function, since $k \geq 2$, 
+\begin{align*}
+f'(x) &= k(x-a)^{k-1}g(x) + g'(x)(x-a)^k\\
+f'(x) &= (x-a)[k(x-a)^{k-2}g(x) + g'(x)(x-a)^{k-1}]
+\end{align*}
+Therefore, $x-a$ is a factor of $f'(x)$, the derivative of $f(x)$, and $a$ is a root of $f'(x)$.\\
+
+$\Leftarrow$ Assume that $a$ is a root of both $f(x)$ and $f'(x)$. Then we can represent $f(x)$ and $f'(x)$ as
+\begin{align*}
+f(x) &= (x-a)g(x)\\
+f'(x) &= (x-a)h(x)
+\end{align*}
+for some $g(x), h(x) \epsilon \mathbb{F}[x]$. We can differntiate the first equation as
+\[f'(x) = (x-a)g'(x) + g(x)\]
+which we can then substitute into the equation above for $f'(x)$ to get
+\begin{align*}
+(x-a)h(x) &= (x-a)g'(x) + g(x)\\
+(x-a)h(x) - (x-a)g'(x) & = g(x)\\
+(x-a)[h(x) - g'(x)] &= g(x)
+\end{align*}
+Finally, we can substitute this equation for $g(x)$ into our first equation and show that
+\begin{align*}
+f(x) &= (x-a) * (x-a) [h(x)-g'(x)]\\
+f(x) &= (x-a)^2 [h(x)-g'(x)]
+\end{align*}
+Therefore, a is a multiple root of $f(x)$.
 
 \end{homeworkProblem}
 
