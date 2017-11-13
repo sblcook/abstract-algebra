@@ -278,6 +278,24 @@ Determine the rules for addition and multiplication of congruence class
 
 \end{homeworkProblem}
 
+\begin{homeworkProblem}
+
+Explain why $[f(x)]]$ is a unit in $F[x]/(p(x))$ and find its inverse
+\[ [f(x)] = [x^2 + x + 1] \in \mathbb{Z}_3[x]/(x^2+1) \]
+
+\begin{solution}
+
+In this problem, $[f(x)]$ is a unit because $f(x)$ is relatively prime with $p(x)$. To prove this, we can use the Euclidean Algorithm. We know that
+\[ [f(x)] = [x^2 + x + 1]  = [(x^2 + 1) + x] = [x]\]
+When we go to do the Euclidean Algorithm with $[x]$ and $[x^2 + 1]$, we get
+\[ x^2 + 1 = x * x + 1\]
+Which is the definition of relatively prime. Therefore, by Theorem 5.9, $[x]$, and it follows for $[x^2 + x + 1]$, is a unit. 
+The inverse of $[x^2 + x + 1]$ is $[2x]$ since when we multiply
+\[ [x^2 + x + 1] * [2x] = [(x^2 + x+1)(2x)] = [2x^3 + 2x^2 + 2x] = [(x^2+1)(2x + 2) + 1] = [0+1] = [1] \]
+Therefore, $[f(x)]$ is a unit and $[2x]$ is its inverse.
+\end{solution}
+\end{homeworkProblem}
+
 \pagebreak
 
 \end{document}
