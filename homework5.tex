@@ -10,6 +10,7 @@
 \usepackage{algpseudocode}
 \usepackage{enumitem}
 \usepackage{polynom}
+\usepackage{amssymb}
 
 \usetikzlibrary{automata,positioning}
 
@@ -156,11 +157,31 @@
     
     	\textbf{1)} The polynomial written as a product of irreducibles is
     	\[(x+1)(x-3/2)(2x^2-4x-4)\]
-    	$(x+1)$ and $(x-3/2)$ are irreducible because they both are degree 1, and by definition are irreducible. Since $2x^2-4x-4$ is degree 2, it has roots if and only if it is reducible. These two factors were found by using the Rational Root Theorem. Futhermore, by the Rational Root Theorem, we know that the only possible roots in $\mathbb{Q}$ are $\pm \{1, 2\}$. However, none of these are roots as $f(1) = -6, f(-1) = 2, f(2) = -4, f(-2) = 12$, none of which are 0, and thus, it has no roots and is irreducible. Therefore, this is a product of irreducibles.\\
+    	$(x+1)$ and $(x-3/2)$ are irreducible because they both are degree 1, and by definition are irreducible. Since $2x^2-4x-4$ is degree 2, it has roots if and only if it is reducible. These two factors were found by using the Rational Root Theorem. Furthermore, by the Rational Root Theorem, we know that the only possible roots in $\mathbb{Q}$ are $\pm \{1, 2\}$. However, none of these are roots as $f(1) = -6, f(-1) = 2, f(2) = -4, f(-2) = 12$, none of which are 0, and thus, it has no roots and is irreducible. Therefore, this is a product of irreducibles.\\
     	
     	\textbf{2)} The polynomial written as a product of irreducibles is
     	\[g(x) = (x+4)(x+1)(x+3)\]
     	We know that all three factors are irreducible because they are all degree 1. This solution was obtained by simply testing to see if any of the 7 elements of $\mathbb{Z}_7$ are roots, since this is a degree 3 polynomial that factors if and only if it has a root. In our case, $g(4) = 0, g(1) = 0, g(3) = 0$.
+
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+
+	Show that each polynomial is irreducible in $\mathbb{Q}[x]$.
+	\begin{enumerate}
+		\item $x^5 + 6x^3 + 9x^2 + 21$
+		\item $2x^3 + x -1$
+		\item $9x^4 + 4x^3 - 3x + 7$
+	\end{enumerate}
+	
+	\textbf{Solution}
+	
+	\textbf{1)} We can use Eisenstein's Criterion to prove that this is irreducible with $p=3$, because $3\mid6, 3\mid9, 3\mid21$, but $3^2 = 9\nmid 21$ and $3\nmid 1$.\\
+	\textbf{2)} Since this is a degree 3 polynomial, if there are no roots, then the polynomial is irreducible. We can use the Rational Root Theorem to determine that the only possible roots are $\pm\{1, 1/2\}$. None of these are roots, since $f(1) = 2, f(-1) = -4, f(1/2) = -1/4, f(-1/2) = -7/4$, none of which are 0. Therefore, there are no roots and it is irreducible.\\
+	\textbf{3)} We will reduce all the coefficients modulo 2 and prove that is irreducible. We we take all the coefficients modulo 2, we get
+	\[x^4 +x +1\]
+	This has no roots, or degree 1 factors, since $0^4 +0 +1 = 1 \neq 0$ and $1^4 +1 +1 = 1 \neq 0$. The only quadratic polynomials in $\mathbb{Z}_2$ are $x^2, x^2 + x, x^2+1,$ and $x^2 + x + 1$. Of these, the only possible factor is $x^2 + x + 1$, since the first three have degree 1 factors($x^2 = x(x), x^2 + x = x(x+1), x^2+1 = (x+1)(x+1))$ which is impossible, as shown above. Therefore the only possible factor is $x^2 + x + 1$, but $x^2 + x + 1 \nmid x^4 +x +1$, since $x^4 +x +1 = (x^2 + x +1)(x^2+x) +1$. Therefore, this polynomial is irreducible in $\mathbb{Z}_2$, and as a result of that, irreducible in $\mathbb{Q}$.
+	
 
 \end{homeworkProblem}
 
