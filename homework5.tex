@@ -223,7 +223,16 @@ Prove that if $c$ is any element in a field $\mathbb{F}$ and $f(x) \in \mathbb{F
 
 	Consider a polynomial $f(x) \in \mathbb{F}[x]$. When we divide $f(x)$ by $x-c$ for any $c \in \mathbb{F}$, from the Division Algorithm we get that $f(x) = q(x)(x-c) + r(x)$ for some $q,r \in \mathbb{F}[x]$ with 0 $\leq$ degree $r<$ degree $q$. Now consider $x=c$. This implies that $f(c) = r(c)$. We can then write this as $f(x) = q(x)(x-c) + f(c)$. We can rearrange to get that $f(x)-f(c) = q(x)(x-c)$. But since $q \in \mathbb{F}$, this implies that $(x-c) \mid f(x)-f(c)$. This is the definition of modulo though, so this implies that $f(x) \equiv f(c)$ mod $(x-c)$.
 \end{solution}
+\end{homeworkProblem}
+\begin{homeworkProblem}
 
+List all the elements of the ring $\mathbb{Z}_3/(x^2 + 2x + 1)$
+
+\begin{solution}
+
+The elements of the ring are defined by $\{[ax+b] | a,b \in \mathbb{Z}_3\}$. The elements of $\mathbb{Z}_3$ are 0, 1, and 2. Therefore, the elements of the ring are
+\[ [2x + 2], [2x+1], [2x], [x+2], [x+1], [x], [2], [1], [0] \]
+\end{solution}
 \end{homeworkProblem}
 
 \pagebreak
