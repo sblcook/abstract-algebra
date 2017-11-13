@@ -259,6 +259,25 @@ Determine the rules for addition and multiplication of congruence class
 \end{solution}
 
 \end{homeworkProblem}
+
+\begin{homeworkProblem}[8]
+Determine the rules for addition and multiplication of congruence class
+\[ \mathbb{Q}[x]/(x^2) \]
+\begin{solution}
+	
+	The solution to this is very similar to the solution to the previous problem.
+	Take $[ax + b]$ and $[cx + d]$ in$\mathbb{Q}[x]/(x^2)$. 
+	The rule for addition is just component addition:
+	\[ [ax+b] + [cx+d] = [(ax+b)+(cx+d)]= [(a+c)x + (b+d)] \]
+	The rule for multiplication is then:
+	\[ [ax+b] + [cx+d] = [(ax+b)(cx+d)] = [(acx^2 + (ad + bc)x + bd)] \]
+	But we know that we can write $[(acx^2 + (ad + bc)x + bd)]$ in the form of a degree 1 polynomial. So 
+	\[ 	[(acx^2 + (ad + bc)x + bd)] = [(ad + bc)x + bd] \]
+	Those are the multiplication and addition rules for $\mathbb{Q}[x]/(x^2)$.
+\end{solution}
+
+\end{homeworkProblem}
+
 \pagebreak
 
 \end{document}
