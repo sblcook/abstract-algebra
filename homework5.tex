@@ -235,6 +235,30 @@ The elements of the ring are defined by $\{[ax+b] | a,b \in \mathbb{Z}_3\}$. The
 \end{solution}
 \end{homeworkProblem}
 
+\section{Section 5.2}
+
+\begin{homeworkProblem}[6]
+Determine the rules for addition and multiplication of congruence class
+\[ \mathbb{Q}[x]/(x^2-2) \]
+\begin{solution}
+
+	Take $[ax + b]$ and $[cx + d]$ in$\mathbb{Q}[x]/(x^2-2)$. 
+	The rule for addition is just component addition:
+	\[ [ax+b] + [cx+d] = [(ax+b)+(cx+d)]= [(a+c)x + (b+d)] \]
+	The rule for multiplication is then:
+	\[ [ax+b] + [cx+d] = [(ax+b)(cx+d)] = [(acx^2 + (ad + bc)x + bd)] \]
+	But we know that we can write $[(acx^2 + (ad + bc)x + bd)]$ in the form of a degree 1 polynomial. So 
+	\[ 
+	\begin{split}
+	[(acx^2 + (ad + bc)x + bd)] &= [(acx^2 -2ac + (ad + bc)x + bd + 2ac)]\\
+	&= [ac(x^2-2) + (ad + bc)x + (bd + 2ac)]\\
+	&= [(ad + bc)x + (bd + 2ac)]
+	\end{split}
+	\]
+	Those are the multiplication and addition rules for $\mathbb{Q}[x]/(x^2-2)$.
+\end{solution}
+
+\end{homeworkProblem}
 \pagebreak
 
 \end{document}
