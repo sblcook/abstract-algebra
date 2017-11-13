@@ -208,13 +208,23 @@
 \begin{homeworkProblem}
 	Find a polynomial in $\mathbb{R}[x]$ that is monic of degree 3 with 2 and $3+i$ as roots\\
 	
-	\begin{solution}\\
+	\begin{solution}
+
 		Since $3+i$ is a root, then $3-i$ must also be a root. Then, by the definition of a root, we know that our polynomial is 
 		\[(x-2)(x-(3+i))(x-(3-i)) = (x-2)(x^2-6x+10) = (x^3 - 8x^2 + 22x -20)\]
 	\end{solution}
 \end{homeworkProblem}
 
+\begin{homeworkProblem}[6]
 
+Prove that if $c$ is any element in a field $\mathbb{F}$ and $f(x) \in \mathbb{F}[x]$, then $f(x) \equiv f(c)$ mod $(x-c)$.\\
+
+\begin{solution}
+
+	Consider a polynomial $f(x) \in \mathbb{F}[x]$. When we divide $f(x)$ by $x-c$ for any $c \in \mathbb{F}$, from the Division Algorithm we get that $f(x) = q(x)(x-c) + r(x)$ for some $q,r \in \mathbb{F}[x]$ with 0 $\leq$ degree $r<$ degree $q$. Now consider $x=c$. This implies that $f(c) = r(c)$. We can then write this as $f(x) = q(x)(x-c) + f(c)$. We can rearrange to get that $f(x)-f(c) = q(x)(x-c)$. But since $q \in \mathbb{F}$, this implies that $(x-c) \mid f(x)-f(c)$. This is the definition of modulo though, so this implies that $f(x) \equiv f(c)$ mod $(x-c)$.
+\end{solution}
+
+\end{homeworkProblem}
 
 \pagebreak
 
